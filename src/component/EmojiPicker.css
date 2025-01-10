@@ -1,0 +1,35 @@
+.EmojiPickerReact {
+    background-color: black; /* Bakgrundsfärg */
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Skugga */
+    font-family: 'Helvetica', 'Arial', sans-serif;
+  }
+  
+  .EmojiPickerReact .emoji-categories {
+    background-color: black; /* Kategoriernas bakgrundsfärg */
+    color: white;
+  }
+  
+  .EmojiPickerReact .emoji-categories button {
+    background: none;
+    border: none;
+    color: white;
+  }
+  
+  .EmojiPickerReact .emoji-scroll-wrapper {
+    max-height: 200px; /* Gör att väljaren inte blir för lång */
+  }
+  
+  .EmojiPickerReact .emoji-search {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .EmojiPickerReact .emoji-group {
+    margin: 10px;
+  }
+  
+  .EmojiPickerReact .emoji-group div {
+    font-size: 1.2rem; /* Förstora emojis */
+  }

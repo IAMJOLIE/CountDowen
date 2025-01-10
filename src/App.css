@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.events-box {
+  width: 600px;
+ }
+ .event-box {
+  max-width: 450px;
+  }
+
+form{
+margin-top: 100px;
+}
+@media screen and (max-width:  600px) {
+  .events-box {
+   width: 350px;
+  }
+
+  .event-box {
+   max-width: 300px;
+   }
+   form{
+    margin-top: 50px;
+    }
+}
+
+
+
+
