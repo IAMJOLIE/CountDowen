@@ -1,9 +1,9 @@
 import { useState } from "react";
-import './Eventinput.css'
+
 import { useNavigate } from "react-router-dom";
 import EmojiPicker from "emoji-picker-react";
 import './EmojiPicker.css'
-import useEvents from "../Hooks/useEvents";
+
 
 
 const EventInput = ({onAddEvent}) => {
