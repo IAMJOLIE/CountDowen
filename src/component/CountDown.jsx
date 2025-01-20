@@ -8,8 +8,17 @@ const CountDown = ({events}) => {
    const {i} = useParams()
    const [close, setclose] = useState(false)
    const [loading, setLoading] = useState(true)
-   const [alertShown, setAlertShown] = useState(false)
+
    const nav = useNavigate()
+
+   useEffect(() => {
+      // Simulera laddning
+      const loadingTimer = setTimeout(() => {
+        setLoading(false);
+      }, 1000); // Justera tiden efter behov
+  
+      return () => clearTimeout(loadingTimer); // Rensa timer
+    }, []);
  
    const [timeLeft, setTimeLeft] = useState({
       days: 0,
@@ -25,34 +34,6 @@ const CountDown = ({events}) => {
      
    }
    
-
-   useEffect(() => {
-      const calculateTimeLeft = () => {
-         const now = new Date();
-         const target = new Date(event.date);
-         const difference = target - now
-
-         if (difference > 0) {
-            setTimeLeft ({
-               days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-               hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-               minutes: Math.floor((difference / (1000 * 60)) % 60),
-               seconds: Math.floor((difference / 1000) % 60),
-            })
-
-         const hoursLeft = Math.floor(difference / (1000 * 60 * 60));
-        if (hoursLeft === 24 && !alertShown) {
-          alert(`"${event.name}" är 24 timmar bort!`);
-          setAlertShown(true); }
-         } else {
-            setTimeLeft({days: 0, hours: 0, minutes: 0, seconds: 0})
-         } 
-setLoading(false)
-      }
-
-      const timer = setInterval(calculateTimeLeft, 1000);
-      return () => clearInterval(timer);
-   }, [event, alertShown])
 
    const formatDate = (isoString) => {
       const date = new Date(isoString);
@@ -106,16 +87,17 @@ setLoading(false)
         Laddar...
       </div>
     ) : (
-      timeLeft.days === 0 &&
-        timeLeft.hours === 0 &&
-        timeLeft.minutes === 0 &&
-        timeLeft.seconds === 0  ? (
-               <p style={{ color: "#FF0000", fontSize: 40 }}>KLART!</p>
-            ) : (
-               <p style={{ color: "#FFFFFF", fontSize: 20 }}>
-                  {timeLeft.days} dagar, {timeLeft.hours} timmar, {timeLeft.minutes} minuter, {timeLeft.seconds} sekunder
-               </p>
-            )
+      <div>
+      {event.isCompleted ? (
+         <p>COMPLETED!</p>
+        ) : (
+         <p  style={{ fontSize: 20, color: '#ffffff' }}> {event.timeLeft.days} dagar, {event.timeLeft.hours} timmar,{" "}
+         {event.timeLeft.minutes} minuter, {event.timeLeft.seconds} sekunder
+
+          </p>
+
+        )}
+        </div>
     )}
   
     

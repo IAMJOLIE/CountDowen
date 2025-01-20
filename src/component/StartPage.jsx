@@ -25,7 +25,14 @@ const StartPage = ({events, deletEvent}) => {
            <p  style={{ fontSize: 20, color: '#ffffff' }}>  {event.name} </p>
            
           
-           <p  style={{ fontSize: 20, color: '#ffffff' }}> {new Date(event.date).toLocaleString()} </p>
+           {event.isCompleted ? (
+            <p>COMPLETED!</p>
+           ) : (
+            <p  style={{ fontSize: 18, color: '#ffffff' }}>  {event.timeLeft.days} dagar, {event.timeLeft.hours} timmar,{" "}
+            {event.timeLeft.minutes} minuter
+             </p>
+
+           )}
            </div>
             </div >
            
