@@ -64,7 +64,7 @@ const CountDown = ({events}) => {
      
    
 
-         <h2>Nedräkning till {event.name}</h2>
+         <h2>Countdown to {event.name}</h2>
            <p style={{ fontSize: 20, fontWeight: 6, color: "black" }}>
         {formatDate(event.date)}
       </p>
@@ -84,15 +84,15 @@ const CountDown = ({events}) => {
           fontSize: 20,
         }}
       >
-        Laddar...
+        Loading...
       </div>
     ) : (
       <div>
       {event.isCompleted ? (
          <p>COMPLETED!</p>
         ) : (
-         <p  style={{ fontSize: 20, color: '#ffffff' }}> {event.timeLeft.days} dagar, {event.timeLeft.hours} timmar,{" "}
-         {event.timeLeft.minutes} minuter, {event.timeLeft.seconds} sekunder
+         <p  style={{ fontSize: 20, color: '#ffffff' }}> {event.timeLeft.days} days, {event.timeLeft.hours} hours,{" "}
+         {event.timeLeft.minutes} minutes, {event.timeLeft.seconds} seconds
 
           </p>
 

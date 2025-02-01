@@ -6,8 +6,8 @@ const StartPage = ({events, deletEvent}) => {
     return ( 
         <div style={{ textAlign: "center", display: 'flex', flexDirection: 'column', alignItems: 'center', gap:  50, justifyContent: 'space-between', height: '100%' , margin: 'auto', marginTop: 100}}>
        <div>
-          <h1 style={{color: '#FFFFFF' , margin: 40}}>Nedräckningar</h1>
-            <p  style={{fontSize: {md: 20, xs: 12, margin: 10}}}>Låt oss hjälpa dig att hålla koll på tiden tills det ögonblick du ser fram emot!</p>
+          <h1 style={{color: '#FFFFFF' , margin: 40}}>Countdown</h1>
+            <p  style={{fontSize: {md: 20, xs: 12, margin: 10}}}>Let us help you keep track of the moments you look forward to!</p>
             </div>
        
        
@@ -28,8 +28,8 @@ const StartPage = ({events, deletEvent}) => {
            {event.isCompleted ? (
             <p>COMPLETED!</p>
            ) : (
-            <p  style={{ fontSize: 18, color: '#ffffff' }}>  {event.timeLeft.days} dagar, {event.timeLeft.hours} timmar,{" "}
-            {event.timeLeft.minutes} minuter
+            <p  style={{ fontSize: 18, color: '#ffffff' }}>  {event.timeLeft.days} days, {event.timeLeft.hours} hours,{" "}
+            {event.timeLeft.minutes} minutes
              </p>
 
            )}
@@ -57,7 +57,7 @@ const StartPage = ({events, deletEvent}) => {
           borderRadius: "5px",
           cursor: "pointer",
         }}>
-                + Skapa ny Nedräckning
+                + Greate New Countdown
             </button>
         </div>
      );

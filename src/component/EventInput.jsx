@@ -39,14 +39,14 @@ const handleButton = (e) =>{
         <div >
 
            <label className="label">
-           <p> Välje ett namn:</p>
+           <p> Choose a name:</p>
             <input type="text" value={name} onChange={(e) => setName (e.target.value)} required style={{padding: 10, width: 250, textAlign: 'center', outline: 'none', boxShadow: '0px 0px 10px 3px rgba(0, 0, 0, 0.6)', fontSize: 19, margin: 10 }}  />
            </label> 
 
         </div>
     
         <div >
-            <p>Välje ett emoji</p>
+            <p>Choose an emoji</p>
             <div style={{fontSize: 90, padding: 15,   boxShadow: '0px 0px 10px 3px rgba(0, 0, 0, 0.3)', display: 'flex', alignItems: 'center', justifyContent: 'center' , marginTop: 15 , }}>
         <button
         onClick={()=> setShowPicker((prev) => !prev)}
@@ -73,12 +73,12 @@ const handleButton = (e) =>{
         </div>
         <div>
             <label>
-              <p>  Datum: </p>
+              <p>Choose a date: </p>
                 <input className="input_date" type="datetime-local" value={date} onChange={(e) => setDate(e.target.value)}  required  style={{padding: 10, width: 250, textAlign: 'center', outline: 'none', boxShadow: '0px 0px 10px 3px rgba(0, 0, 0, 0.6)', fontSize: 19, margin: 15  }}/>
             </label>
         </div>
      <div>
-        <p  style={{marginBottom: 15 }}>Välje ett färge för temat</p>
+        <p  style={{marginBottom: 15 }}>Choose a color for the theme</p>
         <div style={{display: 'flex', gap: 10}}>
 
         
@@ -109,7 +109,7 @@ const handleButton = (e) =>{
           border: "none",
           borderRadius: "5px",
           cursor: "pointer",}} >
-            Starta nedräckning 
+            Start Countdown 
         </button>
 
        </form>

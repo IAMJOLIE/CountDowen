@@ -1,14 +1,22 @@
-CountDown-komponenten
+## 🚀 Funktioner
+- Skapa och spara event med namn, datum, emoji och färg.
+- Realtidsnedräkning som uppdateras automatiskt.
+- Visar "COMPLETED!" när tiden är slut.
+- Sparar event lokalt med `localStorage`.
 
-CountDown är en central del av applikationen som visualiserar en nedräkning för ett specifikt event. Komponenten är utformad för att vara både funktionell och användarvänlig.
+## 📸 Förhandsvisning
+[Live-demo på Netlify](https://din-netlify-länk.netlify.app)
 
+## 🛠️ Tekniker
+- **Frontend:** React, Vite, Hooks, LocalStorage
+- **Deploy:** Netlify
 
-1- Dynamisk datahantering: Hämtar eventinformation baserat på index från URL:en och visar namn, emoji, färg samt återstående tid i realtid.
+## 📌 Kommande förbättringar
+- Backend med en databas för att spara event globalt.
+- Möjlighet att dela nedräkningar med vänner.
+- Mer anpassningsbara teman.
 
-2- Statusuppdatering: När tiden är slut ersätts nedräkningen med texten "COMPLETED!" för att tydligt indikera att eventet är avslutat.
-
-3- Laddningshantering: En indikator visar "Laddar..." tills datan är redo att renderas.
-
-4- Användarinteraktion: Innehåller en knapp som möjliggör navigering tillbaka till startsidan för att enkelt stänga nedräkningen.
-
-CountDown kombinerar praktisk funktionalitet med ett visuellt tilltalande gränssnitt för en sömlös användarupplevelse.
+## 🏗️ Installera lokalt
+1. Klona repot:
+   ```bash
+   git clone https://github.com/ditt-användarnamn/countdown-app.git
