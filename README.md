@@ -16,7 +16,4 @@
 - Möjlighet att dela nedräkningar med vänner.
 - Mer anpassningsbara teman.
 
-## 🏗️ Installera lokalt
-1. Klona repot:
-   ```bash
-   git clone https://github.com/ditt-användarnamn/countdown-app.git
+
